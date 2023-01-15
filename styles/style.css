@@ -24,6 +24,7 @@ body{
 .container{
     max-width: 1300px;
     margin: 0 auto;
+    width: 100%;
 }
 /* header nav */
 
@@ -31,6 +32,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    padding: 20px;
 }
 
 .nav-left h3{
@@ -80,7 +82,8 @@ body{
     margin-bottom: 30px;
 }
 .banner-caption img{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .captions .banner-description{
@@ -105,7 +108,8 @@ body{
 /* feature part */
 
 .feature{
-    width: 1200px;
+    width: 100%;
+    max-width: 1300px;
     margin: 0  auto 100px;
     display: flex;
     align-items: center;
@@ -147,7 +151,8 @@ body{
 
 /* features styles */
 .features{
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 .features .features-caption{
@@ -211,7 +216,8 @@ body{
 
 /* fact style */
 .fact{
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 .fact-title{
@@ -251,7 +257,8 @@ body{
 .sponspors{
     display: flex;
     flex-direction: column;
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     margin: 0 auto;
    
     
@@ -281,7 +288,8 @@ body{
 .shares{
     display: flex;
     flex-direction: column;
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     margin: 0 auto;
    
     
@@ -305,11 +313,13 @@ body{
 
 /* footer */
 .footer{
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     background-color: antiquewhite;
     margin: 0 auto;
     padding: 30px;
     margin-bottom: 100px;
+   
 }
 .footer p{
     text-align: center;
@@ -318,13 +328,14 @@ body{
     font-weight: 800;
 }
 
-.hide{
-    display: none;
-}
 
-/* @media screen and (max-width:576px) {
+@media only screen and (max-width:576px) {
+   .header{
+    margin: 0 auto;
+   } 
+    
     .container{
-        max-width: 100%;
+       
         margin: 0 auto;
     }
     
@@ -348,47 +359,85 @@ body{
 
 }
 
-/* banner */
 
-.banner{
-    margin-top: 100px;
-    height: 820px;
-    
-}
+/* banner style */
+
+
+
 .captions{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 876px;
+    width: 100%;
     margin: 0 auto;
 }
 
-.captions .banner-caption{
-    font-size: 64px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.banner-caption img{
-    width: 1000px;
+/* feature */
+
+.feature{
+   
+    flex-direction: column;
 }
 
-.captions .banner-description{
-    font-size: 16px;
-    font-weight: 500;
-    color: gray;
-    text-align: center;
-    margin-bottom: 30px;
+.feature-left{
+   
+    grid-template-columns: repeat(1,1fr);
+   
 }
 
-.btn{
-    background-color: orange;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 18px;
-    margin-bottom: 30px;
+
+/* features */
+
+
+.features{
+    display: flex;
+    gap: 100px;
+    flex-direction: column-reverse;
+
+}
+.features-captions{
+    width: 100%;
+}
+.features-img{
+    width: 100%;
 }
 
-} */
+/* fact */
+.fact-caption{
+    padding: 20px;
+}
+
+/* rating style */
+.ratings{
+    align-items: center;
+    gap: 20px;
+   flex-direction: column;
+}
+
+/* sharess */
+ .sharess{
+    padding: 20px;
+ }
+/* sponspors */
+
+.logos{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+/* footer */
+.footer{
+    max-width: 576px;
+    margin: 0 auto;
+}
+.footer p{
+    font-size: 10px;
+}
+.footerr{
+    margin-right: 70px;
+}
+}
